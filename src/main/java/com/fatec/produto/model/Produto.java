@@ -11,7 +11,7 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String descricao;
-    private String categaria;
+    private String categoria;
 
     private double custo;
     private int quantidadeNoEstoque;
@@ -26,15 +26,19 @@ public class Produto {
         this.descricao = descricao;
     }
     }
-    public String getCategaria() {
-        return categaria;
+
+    public Long getId() {
+        return id;
+    }
+    public String getCategoria() {
+        return categoria;
     }
 
     public void setCategaria(String categoria) {
         if(categoria==null || categoria.isBlank()){
             throw new IllegalArgumentException("A categoria não deve ser nula");
         } else {
-            this.categaria = categoria;
+            this.categoria = categoria;
     }}
 
     public double getCusto() {
@@ -72,11 +76,13 @@ public class Produto {
 
     public Produto(String descricao, String categaria, double custo, int quantidadeNoEstoque) {
         this.descricao = descricao;
-        this.categaria = categaria;
+        this.categoria = categoria;
         this.custo = custo;
         this.quantidadeNoEstoque = quantidadeNoEstoque;
     }
 
     public  Produto(){
     }
+
+
 }

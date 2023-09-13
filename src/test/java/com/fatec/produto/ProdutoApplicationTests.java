@@ -1,5 +1,6 @@
 package com.fatec.produto;
 
+import com.fatec.produto.model.Catalogo;
 import com.fatec.produto.model.Produto;
 import com.fatec.produto.service.IProdutoServico;
 import com.fatec.produto.service.ProdutoServico;
@@ -29,7 +30,7 @@ class ProdutoApplicationTests {
 	}
 	@Test
 	void ct02_consulta_com_sucesso(){
-		List<Produto> produtos = produtoServico.consultaCatalogo();
+		List<Catalogo> produtos = produtoServico.consultaCatalogo();
 		assertEquals(1,produtos.size());
 	}
 }
